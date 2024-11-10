@@ -41,7 +41,7 @@ const Home = () => {
     };
 
     return (
-        <div className="flex justify-center items-center flex-col">
+        <div className="flex justify-center items-center flex-col h-dvh">
             <div className="w-[550px] flex flex-col gap-8">
                 <div className="flex gap-8 justify-between items-center border-2 border-neutral-300 rounded-lg px-16 py-4">
                     <div>
