@@ -41,8 +41,8 @@ const Home = () => {
     };
 
     return (
-        <div className="flex justify-center items-center flex-col h-dvh">
-            <div className="w-[550px] flex flex-col gap-8">
+        <div className="flex justify-center items-center flex-col pt-10 p-4">
+            <div className="w-[550px] flex flex-col gap-4">
                 <div className="flex gap-8 justify-between items-center border-2 border-neutral-300 rounded-lg px-16 py-4">
                     <div>
                         <h1 className="text-3xl">Task Done</h1>
@@ -60,7 +60,7 @@ const Home = () => {
                 </div>
                 <div className="flex flex-col items-center">
                     <form
-                        className="flex flex-row w-full justify-center items-center text-center"
+                        className="flex flex-row w-full justify-center items-center text-center gap-6"
                         onSubmit={(e) => handleSubmit(e)}
                     >
                         <input
@@ -72,7 +72,7 @@ const Home = () => {
                         />
                         <button
                             type="submit"
-                            className="bg-[#87AA39] p-4 rounded-lg flex justify-center items-center text-center"
+                            className="bg-[#87AA39] py-4 px-6 rounded-lg flex justify-center items-center text-center"
                         >
                             <p>+</p>
                         </button>
