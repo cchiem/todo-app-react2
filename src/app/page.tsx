@@ -41,9 +41,9 @@ const Home = () => {
     };
 
     return (
-        <div className="flex justify-center items-center flex-col pt-10 p-4">
-            <div className="w-[550px] flex flex-col gap-4">
-                <div className="flex gap-8 justify-between items-center border-2 border-neutral-300 rounded-lg px-16 py-4">
+        <div className="flex justify-center items-center flex-col pt-24 p-4">
+            <div className="w-[450px] flex flex-col gap-8   ">
+                <div className="flex justify-between items-center border-[2px] border-neutral-300 rounded-lg py-4 px-12">
                     <div>
                         <h1 className="text-3xl">Task Done</h1>
                         <p className="text-2xl">Keep it up!</p>
@@ -72,12 +72,31 @@ const Home = () => {
                         />
                         <button
                             type="submit"
-                            className="bg-[#87AA39] py-4 px-6 rounded-lg flex justify-center items-center text-center"
+                            className="bg-[#87AA39] py-3 px-3 rounded-lg flex justify-center items-center text-center"
                         >
-                            <p>+</p>
+                            <svg
+                                clip-rule="evenodd"
+                                fill-rule="evenodd"
+                                stroke-linejoin="round"
+                                stroke-miterlimit="2"
+                                viewBox="0 0 24 24"
+                                xmlns="http://www.w3.org/2000/svg"
+                                width="32"
+                                height="32"
+                            >
+                                <path
+                                    d="m11 11h-7.25c-.414 0-.75.336-.75.75s.336.75.75.75h7.25v7.25c0 .414.336.75.75.75s.75-.336.75-.75v-7.25h7.25c.414 0 .75-.336.75-.75s-.336-.75-.75-.75h-7.25v-7.25c0-.414-.336-.75-.75-.75s-.75.336-.75.75z"
+                                    fill-rule="nonzero"
+                                ></path>
+                            </svg>
                         </button>
                     </form>
                 </div>
+                {todoList.length == 0 && (
+                    <div className="text-center p-4">
+                        <h1>Seems lonely in here, what are you up to?</h1>
+                    </div>
+                )}
                 {todoList.map((todo, index) => (
                     <TodoItem
                         item={todo}
