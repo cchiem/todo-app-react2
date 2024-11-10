@@ -83,7 +83,10 @@ const TodoItem: React.FC<TodoItemProps> = ({ item, setTodoList }) => {
                         id={item.id}
                         className="flex justify-between items-center border-white border-[2px] w-full h-16 px-4 rounded-lg hover:cursor"
                     >
-                        <button className="flex" onClick={completeTodo}>
+                        <button
+                            className="flex truncate"
+                            onClick={completeTodo}
+                        >
                             <svg
                                 width="24"
                                 height="24"
@@ -92,15 +95,18 @@ const TodoItem: React.FC<TodoItemProps> = ({ item, setTodoList }) => {
                             >
                                 <circle cx="12" cy="12" r="10" />
                             </svg>
-                            <p
-                                style={
-                                    item.is_completed
-                                        ? { textDecoration: "line-through" }
-                                        : {}
-                                }
-                            >
-                                {item.title}
-                            </p>
+                            <div className="truncate w-full inline-block">
+                                <p
+                                    style={
+                                        item.is_completed
+                                            ? { textDecoration: "line-through" }
+                                            : {}
+                                    }
+                                    className="w-full truncate ..."
+                                >
+                                    {item.title}
+                                </p>
+                            </div>
                         </button>
 
                         <div className="flex gap-4">
