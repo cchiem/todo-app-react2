@@ -48,7 +48,7 @@ const Home = () => {
                         <h1 className="text-4xl">Task Done</h1>
                         <p className="text-2xl">Keep it up!</p>
                     </div>
-                    <div className="rounded-full size-[150px] bg-green-400 flex justify-center items-center">
+                    <div className="rounded-full size-[150px] bg-[#22C55E] flex justify-center items-center">
                         <h1 className="text-5xl text-white">
                             {
                                 todoList.filter((todo) => todo.is_completed)
@@ -72,7 +72,7 @@ const Home = () => {
                         />
                         <button
                             type="submit"
-                            className="bg-[#87AA39] py-3 px-3 rounded-lg flex justify-center items-center text-center"
+                            className="bg-[#22C55E] py-3 px-3 rounded-lg flex justify-center items-center text-center"
                         >
                             <svg
                                 viewBox="0 0 24 24"

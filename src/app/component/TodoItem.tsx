@@ -81,28 +81,41 @@ const TodoItem: React.FC<TodoItemProps> = ({ item, setTodoList }) => {
                 <>
                     <div
                         id={item.id}
-                        className="flex justify-between items-center border-white border-[2px] w-full h-16 px-4 rounded-lg hover:cursor"
+                        className="flex justify-between items-center border-white border-[1px] w-full h-16 px-4 rounded-sm hover:cursor"
                     >
                         <button
-                            className="flex truncate"
+                            className="flex w-3/4 items-center gap-2    "
                             onClick={completeTodo}
                         >
-                            <svg
-                                width="24"
-                                height="24"
-                                fill={item.is_completed ? "#22C55E" : "#0d0d0d"}
-                                className="mr-2"
-                            >
-                                <circle cx="12" cy="12" r="10" />
-                            </svg>
-                            <div className="truncate w-full inline-block">
+                            <div>
+                                <svg
+                                    stroke-miterlimit="2"
+                                    viewBox="0 0 24 24"
+                                    xmlns="http://www.w3.org/2000/svg"
+                                    width="34"
+                                    height="34"
+                                    stroke="#22C55E"
+                                    fill={
+                                        item.is_completed
+                                            ? "#22C55E"
+                                            : "#0d0d0d"
+                                    }
+                                >
+                                    <circle
+                                        cx="11.998"
+                                        cy="11.998"
+                                        r="9.998"
+                                    ></circle>
+                                </svg>
+                            </div>
+
+                            <div className="truncate">
                                 <p
                                     style={
                                         item.is_completed
                                             ? { textDecoration: "line-through" }
                                             : {}
                                     }
-                                    className="w-full truncate ..."
                                 >
                                     {item.title}
                                 </p>
