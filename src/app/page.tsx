@@ -45,11 +45,11 @@ const Home = () => {
             <div className="w-[450px] flex flex-col gap-8   ">
                 <div className="flex justify-between items-center border-[2px] border-neutral-300 rounded-lg py-4 px-12">
                     <div>
-                        <h1 className="text-3xl">Task Done</h1>
+                        <h1 className="text-4xl">Task Done</h1>
                         <p className="text-2xl">Keep it up!</p>
                     </div>
                     <div className="rounded-full size-[150px] bg-green-400 flex justify-center items-center">
-                        <h1 className="text-6xl text-white">
+                        <h1 className="text-5xl text-white">
                             {
                                 todoList.filter((todo) => todo.is_completed)
                                     .length
