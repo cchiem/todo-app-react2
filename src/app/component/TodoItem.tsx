@@ -74,7 +74,7 @@ const TodoItem: React.FC<TodoItemProps> = ({ item, setTodoList }) => {
                         value={inputValue}
                         onChange={handleOnChangeInput}
                         onBlur={handleInputBlur}
-                        className="h-16 px-4 bg-[#0d0d0d] rounded-lg w-full border-white border-[2px] focus:outline-none focus:ring-0 focus:border-white"
+                        className="h-16 px-4 bg-[#0d0d0d] w-full border-white border-[1px] focus:outline-none focus:ring-0 focus:border-white"
                     />
                 </form>
             ) : (
@@ -89,7 +89,6 @@ const TodoItem: React.FC<TodoItemProps> = ({ item, setTodoList }) => {
                         >
                             <div>
                                 <svg
-                                    stroke-miterlimit="2"
                                     viewBox="0 0 24 24"
                                     xmlns="http://www.w3.org/2000/svg"
                                     width="34"
